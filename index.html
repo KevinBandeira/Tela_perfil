@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+<body>
+    <!-- Modal de Alteração de Senha -->
+    <div id="modal-senha" class="modal">
+        <div class="tudo">
+            <div class="voltar">
+                <img src="botao-voltar.png" alt="" onclick="closeSenhaModal()" style="cursor: pointer;">
+                <h1>Alteração de Senha</h1>
+            </div>
+            <div class="dados">
+                <div class="org-dados">
+                    <div>
+                        <label for="senhaAtual">Senha Atual:</label>
+                    </div>
+                    <input type="password" id="senhaAtual" required>
+                </div>
+                <div class="org-dados">
+                    <div>
+                        <label for="novaSenha">Nova Senha:</label>
+                    </div>
+                    <input type="password" id="novaSenha" required>
+                </div>
+                <div class="org-dados">
+                    <div>
+                        <label for="confirmaSenha">Confirmar Nova Senha:</label>
+                    </div>
+                    <input type="password" id="confirmaSenha" required>
+                </div>
+            </div>
+            <div class="btn-modal">
+                <button onclick="salvarSenha()">Salvar Alteração</button>
+            </div>
+        </div>
+    </div>
+<div class="controller">
+    <div class="config">
+        <div class="ConfigConta">
+            <button class="arroz" style="background:none; border: none; cursor: pointer;">
+                <img src="botao-voltar.png" alt="">
+            </button>
+            <p class="pConfig">Configurações da conta</p>
+        </div>
+    </div>
+    <div class="info">
+        <div class="info-2">
+            <p class="pInfo">Informações da conta</p>
+            <div class="organization">
+                <div class="org-info">
+                    <div class="info-nome" id="org">
+                        <p>Nome de usuário: </p>
+                        <input type="text" id="TxtNome" disabled>
+                    </div>
+                    <div class="info-nome-img">
+                        <button>
+                            <img src="edit-247.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="org-info">
+                    <div class="info-nome" id="org">
+                        <p>CPF: </p>
+                        <input type="text" id="TxtCpf" disabled>
+                    </div>
+                    <div class="info-nome-img">
+                        <button>
+                            <img src="edit-247.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="org-info">
+                    <div class="info-nome" id="org">
+                        <p>Endereço de e-mail: </p>
+                        <input type="text" id="TxtEmail" disabled>
+                    </div>
+                    <div class="info-nome-img">
+                        <button>
+                            <img src="edit-247.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="org-info">
+                    <div class="info-nome" id="org">
+                        <p>Número de telefone: </p>
+                        <input type="text" id="TxtTelefone" disabled>
+                    </div>
+                    <div class="info-nome-img">
+                        <button>
+                            <img src="edit-247.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="org-info">
+                    <div class="info-nome" id="org">
+                        <p>Número de telefone 2: </p>
+                        <input type="text" id="TxtTelefone-2" disabled>
+                    </div>
+                    <div class="info-nome-img">
+                        <button>
+                            <img src="edit-247.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="org-info">
+                    <div class="info-nome" id="org">
+                        <p>Senha: </p>
+                        <input type="password" id="TxtSenha" disabled>
+                    </div>
+                    <div class="info-nome-img">
+                        <button onclick="openSenhaModal()">
+                            <img src="edit-247.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="button">Sair da Conta</button>
+        </div>
+    </div>
+</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", initialize);
+    
+        function initialize() {
+            preencherDados();
+        }
+    
+        function preencherDados() {
+            var nomeInput = document.getElementById("TxtNome");
+            var cpfInput = document.getElementById("TxtCpf");
+            var emailInput = document.getElementById("TxtEmail");
+            var telefoneInput = document.getElementById("TxtTelefone");
+            var telefone2Input = document.getElementById("TxtTelefone-2");
+            var senhaInput = document.getElementById("TxtSenha");
+    
+            nomeInput.value = "arroz";
+            cpfInput.value = "12345678910";
+            emailInput.value = "gamerdetona211@gmail.com";
+            telefoneInput.value = "1199999-9999";
+            telefone2Input.value = "1199999-9999";
+            senhaInput.value = "12345";
+        }
+    
+        function openSenhaModal() {
+            document.getElementById("modal-senha").style.display = "flex";
+        }
+    
+        function closeSenhaModal() {
+            document.getElementById("modal-senha").style.display = "none";
+        }
+    
+        function salvarSenha() {
+    const senhaAtualInput = document.getElementById("senhaAtual");
+    const novaSenhaInput = document.getElementById("novaSenha");
+    const confirmaSenhaInput = document.getElementById("confirmaSenha");
+
+    const senhaAtual = senhaAtualInput.value;
+    const novaSenha = novaSenhaInput.value;
+    const confirmaSenha = confirmaSenhaInput.value;
+
+    const senhaInput = document.getElementById("TxtSenha");
+
+    // Validações
+    if (!senhaAtual || !novaSenha || !confirmaSenha) {
+        alert("Todos os campos são obrigatórios.");
+        return;
+    }
+
+    if (senhaAtual !== senhaInput.value) {
+        alert("A senha atual está incorreta.");
+        return;
+    }
+
+    if (novaSenha !== confirmaSenha) {
+        alert("As senhas não coincidem.");
+        return;
+    }
+
+    senhaInput.value = novaSenha; 
+    console.log("Senha atualizada para:", novaSenha);
+    alert("Senha alterada com sucesso.");
+
+    senhaAtualInput.value = "";
+    novaSenhaInput.value = "";
+    confirmaSenhaInput.value = "";
+
+    closeSenhaModal();
+}
+    </script>
+</body>
+</html>
