@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-
 }
 
 .controller {
@@ -242,6 +241,9 @@ color: #184DAB;
     }
     }
 
+    .arrozito {
+        border: 1px solid red;
+    }
 
 @media only screen and (max-width: 1000px) {
     .controller {
@@ -278,7 +280,7 @@ color: #184DAB;
         flex-direction: column;
         justify-content: start;
         height: 120vh;
-        gap: 270px;
+        gap: 15px;
     }
     .arroz {
         display: none;
