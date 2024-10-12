@@ -280,7 +280,7 @@ color: #184DAB;
         flex-direction: column;
         justify-content: start;
         height: 120vh;
-        gap: 15px;
+        gap: 100px;
     }
     .arroz {
         display: none;
