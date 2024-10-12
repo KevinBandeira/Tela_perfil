@@ -322,7 +322,8 @@ color: #184DAB;
         flex-direction: column;
         justify-content: start;
         height: 120vh;
-        gap: 160px;
+        gap: 130px;
+        border: 1px solid red;
     }
     .arroz {
         display: none;
