@@ -137,6 +137,51 @@ color: #184DAB;
     justify-content: center; /* Alinha horizontalmente */
 }
 
+.modal-tudo {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica em cima da tela */
+    z-index: 1; /* Fica acima do conteúdo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+    backdrop-filter: blur(5px); /* Borrado */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+}
+
+.modal-tudo .tudo-tudo {
+    height: 40vh;
+    background-color: white;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 23px;
+}
+
+.modal-tudo .voltar {
+    width: 80%;
+    height: 10vh;
+    display: flex;
+    align-items: center; /* Alterado para center */
+    gap: 30px; /* Ajuste do gap */
+}
+
+.modal-tudo .org-dados {
+    height: 20vh;
+    border-radius: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+
 .tudo {
     width: 800px;
     min-height: 77vh; /* Para evitar overflow */
@@ -277,7 +322,7 @@ color: #184DAB;
         flex-direction: column;
         justify-content: start;
         height: 120vh;
-        gap: 130px;
+        gap: 160px;
     }
     .arroz {
         display: none;
