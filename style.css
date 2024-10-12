@@ -241,9 +241,6 @@ color: #184DAB;
     }
     }
 
-    .arrozito {
-        border: 1px solid red;
-    }
 
 @media only screen and (max-width: 1000px) {
     .controller {
@@ -280,7 +277,7 @@ color: #184DAB;
         flex-direction: column;
         justify-content: start;
         height: 120vh;
-        gap: 100px;
+        gap: 130px;
     }
     .arroz {
         display: none;
